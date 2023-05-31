@@ -18,10 +18,10 @@ if (postTitleInput.value !=='' && postBodyInput.value !=='') {
 
 
 
-
-// вешаем обрабочик событий на оба поля ввода
+// обрабочик событий на оба поля ввода на проверку заполнения
 postTitleInput.addEventListener('keyup',checkInputs);
 postBodyInput.addEventListener('keyup',checkInputs);
+
 
 
 
@@ -60,6 +60,16 @@ const clearInput = () => {
     postBodyInput.value ='';
 }
 
-// деактивация кнопки при незаполненных полях
+
+//обработчик событий на добавление поста по клику на кнопку
 button.addEventListener('click', addPost);
+
+
+//обработчик событий на очистку полей после отправки данных
 button.addEventListener('click', clearInput);
+
+// деактивируем кнопку после отправки
+button.addEventListener('click', function() {
+  button.setAttribute('disabled', true);
+});
+  
