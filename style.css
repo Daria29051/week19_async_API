@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 50px 100px;
+}
+
+.message {
+    padding: 20px;
+    border: 1px solid pink;
+}
+
+.message__title {
+    color: rgb(245, 51, 83);
+}
