@@ -9,7 +9,7 @@ button.setAttribute('disabled', true);
 
 //делаем кнопку активной только когда оба поля заполнены
 function checkInputs() {
-if (postTitleInput.value !=='' && postBodyInput.value !=='') {
+if (postTitleInput.value.trim() !=='' && postBodyInput.value.trim() !=='') {
     button.removeAttribute('disabled', true);
 } else {
     button.setAttribute('disabled', true);
